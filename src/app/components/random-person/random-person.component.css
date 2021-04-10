@@ -1,0 +1,7 @@
+img {
+  max-height: 30px;
+}
+
+img:hover {
+  transform: scale(2.5);
+}
