@@ -1,0 +1,31 @@
+
+<div class="m-3">
+    <button class="btn btn-primary" (click)=getMorePersons()>
+        Load More
+    </button>
+</div>
+
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Name</th>
+                <th scope="col">Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of persons">
+                <td><img class="rounded-circle" src={{person.picture}} alt={{person.name}}></td>
+           
+                <td> <span class="align-middle">{{person.name}}</span> </td>
+           
+                <td>
+                    <span *ngIf="person.gender == 'male'"><i class="fa fa-mars"></i></span>
+                    <span *ngIf="person.gender == 'female'"><i class="fa fa-venus"></i></span>
+                    
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
